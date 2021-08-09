@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=devic-width, initial-scale=1.0">
+    <link rel="Stylesheet" type="text/css" href="abassley.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>abassley</title>
+
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   background: rgb(207, 198, 198); 
+}
+header
+{
+    position: relative;
+    max-width: 850px;
+    margin: 18px auto;
+    padding: 2px;
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgb(73, 70, 73);
+}
+header ul ul li 
+{
+    position: relative;
+    max-width: 250px;
+    height: 35px;
+    background: rgb(73, 70, 73);
+}
+header ul ul
+{
+    display: none;
+    position: absolute;
+}
+header ul li:hover > ul 
+{
+    display: block;
+    background: rgb(207, 198, 198);
+    transition: 0.7s;
+}
+.logo
+{
+    height: 0px;
+    font-size: 40px;
+    line-height: 45px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 400;
+    text-decoration: none;
+}
+.logo a
+{
+    color: rgb(73, 70, 73);
+    list-style: none;
+    text-decoration: none;
+}
+nav
+{
+    float: right;
+}
+.clearfix
+{
+    clear: both;
+}
+
+nav ul 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li 
+{
+    list-style: none;
+}
+nav ul li a
+{
+    text-transform: uppercase;
+    display: block;
+    margin: 5px 0;
+    padding: 8px 8px;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: rgb(73, 70, 73);
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.7s;
+    height: 12px;
+}
+.container
+{
+    width: 98%;
+    display: flex;
+    background: rgb(26, 25, 26);
+    padding: 5px;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin-left: 12px;
+    margin: 0 auto;
+    border-radius: px;
+}
+.interne
+{
+    flex: 1;
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 5px;
+}
+.externe
+{
+    flex: 3;
+    background: rgb(73, 70, 73);
+    padding: 5px;
+    font-size: 20px;
+    margin: 5px;
+    color: white;
+}
+.externe h4
+{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.externe h1
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+footer
+{
+    margin: 12px;
+    background: rgb(0, 0, 0);
+    height: auto;
+    width: 98%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 15px;
+    color: blanchedalmond;
+}
+.footer-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 0rem;
+}
+.footer-content p
+{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 15px;
+    font-size: 14px;
+}
+.contact p 
+{
+    text-decoration: none;
+    color: rgb(73, 70, 73);
+    opacity: .8;
+}
+.socials
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0 1rem 0;
+}
+.socials li
+{
+    margin: 0 5px;
+}
+.socials a
+{
+    text-decoration: none;
+    color: rgb(73, 70, 73);
+    display: inline-block;
+    padding: 8px 8px;
+    background: #fff;
+    border-radius: 30%;
+    text-decoration: none;
+    color: #000;
+}
+.socials a i 
+{
+    font-size: 1.1rem;
+    transition: color .5s ease;
+}
+.socials a:hover i 
+{
+    color: rgb(35, 0, 131);
+}
+.footer-bottom
+{
+    background: rgb(0, 0, 0);
+    width: 98%;
+    padding: px 0;
+    text-align: center;
+}
+.footer-bottom p
+{
+    font-size: 15px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span
+{
+    text-transform: uppercase;
+    color: rgb(73, 70, 73);
+    opacity: .4;
+}
+.contact
+{
+    text-align: center;
+}
+
+.contain
+{
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 35vh;
+    position: relative;
+}
+.contain .box
+{
+    position: relative;
+    width: 292px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.contain .box .icon
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    transition: 1s;
+}
+.contain .box:nth-child(01) .icon
+{
+    box-shadow: 0 0 0 0 red;
+    background: rgb(207, 198, 198); 
+}
+.contain .box:nth-child(01):hover .icon
+{
+    box-shadow: 0 0 0 400px rgb(73, 70, 73);
+}
+.contain .box:nth-child(02) .icon
+{
+    box-shadow: 0 0 0 0 yellow;
+    background: rgb(207, 198, 198); 
+}
+.contain .box:nth-child(02):hover .icon
+{
+    box-shadow: 0 0 0 400px rgb(73, 70, 73);
+}
+.contain .box:nth-child(03) .icon
+{
+    box-shadow: 0 0 0 0 green;
+    background: rgb(207, 198, 198); 
+}
+.contain .box:nth-child(03):hover .icon
+{
+    box-shadow: 0 0 0 400px rgb(73, 70, 73);
+}
+.contain .box:nth-child(04) .icon
+{
+    box-shadow: rgb(73, 70, 73);
+    background: rgb(207, 198, 198); 
+}
+.contain .box:nth-child(04):hover .icon
+{
+    box-shadow: 0 0 0 400px rgb(73, 70, 73);
+}
+.contain .box .content
+{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.contain .box:hover .content
+{
+    color: #fff;
+}
+.contain .box .content h3
+{
+    font-size: 20px;
+    max-width: 10px 0;
+    padding: 0;
+}
+.contain .box .content p
+{
+    margin: 0;
+    padding: 0;   
+}
+.contain .box .content a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(207, 198, 198);
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    margin-top: 10px;
+    box-shadow: 0 20px 5px rgba(0, 0, 0, .1);
+}
+.contain .box:before
+{
+    content: '';
+    width: 50%;
+    height: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+    z-index: 2;
+    pointer-events: none;
+}
+/* scroll  */
+
+.scroll-btn
+{
+    color: rgb(73, 70, 73);
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+.scroll-btn:hover
+{
+    color: rgb(207, 198, 198);
+}
+    </style>
+</head>
+<body>
+   
+<header>
+        <div class="logo">
+            <a href="#">abassley</a>
+        </div>
+        <div class="menu-toggle"></div>
+        <nav>
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Resume</a></li>
+    <li><a href="img/Lebenslauf 3.pdf" class="active"> Download CV</a></li> 
+    <li><a href="#">Portfolio</a></li> 
+    <li><a href="#">Extra</a>
+    <ul>
+        <li><a href="https://elli.hs-bremerhaven.de/goto.php?target=root_1&client_id=elli">Elli</a></li>
+        <li><a href="https://www4.hs-bremerhaven.de/fb2/ws2021.php?action=showfb&fb=%23SPLUS938DBF">Pläne</a></li>
+        <li><a href="https://informatik.hs-bremerhaven.de/fcamara/">MeineUni-Seite</a></li>
+        <li><a href="https://studenten.hs-bremerhaven.de/appsuite/#!!&app=io.ox/mail&folder=default0/INBOX">OX App Suite</a></li>
+        <li><a href="https://op.wilab19.hs-bremerhaven.de/">OpenProject</a></li>
+    </ul></li> 
+    <li><a href="#">Contact</a></li> 
+</ul>
+
+</nav>
+
+<div class="clearfix"></div>
+</header>
+<div class="container">
+<div class="interne">
+    <img class="#" src="img/a1.jpeg" width="100%" height="100%"></div>
+
+<div class="externe"><h4>Hey, my name is</h4><h1>Camara Fodé Abass</h1><h4>Ich bin derzeit Student im Fach Bereich Wirtschaftsinformatik in Bremerhaven und befinde mich im dritten Semester. Schon seit meiner Kindheit war ich sehr begeistert Informatik zu studieren, es bringt mir mehr Spaß und ich mag gerne programmieren. 
+    <br><br> Persönlich runde ich mein Profil mit weiterem Eigenschaften ab: Selbständig, kontaktfähig und flexibel.</h4></div>
+</div>
+
+<div class="contain">
+    <div class="box">
+        <div class="icon">I</div>
+        <div class="content">
+            <h3>Web Development</h3>
+            <p>Ich habe es angefangen, kleine Webseite zu programmieren und momentan bin ich in der Lage riesige Webseite zu tippen.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="icon">II</div>
+        <div class="content">
+            <h3>Zielsetzung</h3>
+            <p>Um meine Horizont erwarten zu können, bewerbe mich hier um meine Fähigkeit in meiner Richtung zu vertiefen.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="icon">III</div>
+        <div class="content">
+            <h3>Sprachmittler</h3>
+            <p>Ich arbeite zurzeit als ein selbständiger Dolmetscher für das Bundesamt für Migration und Fluchtlinge.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="icon">IV</div>
+        <div class="content">
+            <h3>Hobbies</h3>
+            <p>Ich lese gerne Romane, reise auch gerne, mag Fußball spielen und höre oft Musik.</p><br>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <h3>  All Social media</h3>
+        <p>hier befinden sich die Media, die ich oft verwende.</p>
+        <ul class="socials">
+        <li><a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.google.com/"><i class="fa fa-google"></i></a></li>
+        <li><a href="#"><i class="fa fa-chrome"></i></a></li>
+        <li><a href="https://www.snapchat.com/l/de-de/"><i class="fa fa-snapchat"></i></a></li>
+        <li><a href="https://de-de.facebook.com/login.php"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a></li>
+        <li><a href="https://www.pinterest.de/login/"><i class="fa fa-pinterest"></i></a></li>
+        <li><a href="https://web.telegram.org/#/login"><i class="fa fa-telegram"></i></a></li>
+        <li><a href="https://www.amazon.de/"><i class="fa fa-amazon"></i></a></li>
+        <li><a href="https://www.linkedin.com/login/de"><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a href="https://github.com/"><i class="fa fa-github"></i></a></li>
+        </ul>
+       <div class="contact">
+        <p>Contact: abass03cam@gmail.com / 0049 176 57 67 87 76</p>
+    <p></p>
+</div> 
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2020 abassley. designed by <span>Nboy</span></p>
+    </div>
+</footer>
+<!-- scroll -->
+<div class="scroll-btn">
+    <i class="fas fa-arrow-circle-up"></i>
+</div>
+<script src="./sc.js"></script>
+</body>
+
+</html>
